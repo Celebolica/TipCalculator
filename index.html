@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tip Calculator</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Truculenta:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <main id="container">
+    <h1>Quick Tip</h1>
+    <!--Adding a tip and getting a total section-->
+    <section>
+      <div class="bill">
+        <!--This will be the bill amount-->
+        <label for="bill">Bill</label>
+        <!--we are going to add and event listener to listen for a click and it will run out update function-->
+        <input type="number" placeholder="Your Bill" id="yourBill"/>
+      </div>
+      <div>
+        <div class="space-between">
+          <!--The value is select tip-->
+          <label for="tipInput">Select Tip</label>
+          <span id="tipPercent">0%</span>
+        </div>
+        <!--This will be the slider for the tip. Range gives you the slider, value starts it at 0, is is for getting the info later on-->
+        <input type="range" value="0" id="tipInput" class="range" />
+      </div>
+
+      <div class="space-between">
+        <!--This is the tip amount section.  It will show the tip value from the bar in a dollar amount-->
+        <span>Tip</span>
+        <span id="tipValue"></span>
+      </div>
+      <!--To separate the tipping from the toal amount.-->
+      <hr />
+      <div class="space-between total">
+        <!--This is the total amount section.  It will show the total value with the tip added in-->
+        <span>Total:</span>
+        <span id="totalWithTip"></span>
+      </div>
+    </section>
+    <!--Splitting the Bill section-->
+    <section>
+      <div class="space-between">
+        <!--The value is splitting the bill-->
+        <label for="splitInput">Split Bill</label>
+        <span id="splitValue">Guest</span>
+      </div>
+      <!--This will be the slider for the split value between people. range is the slider, min = 1 person, max= 10 people, value is the default value of 1 person, id so we can access the info -->
+      <input type="range" min="1" max="10" value="1" id="splitInput" class="range" />
+      </div>
+      <div class="space-between billeachtotal">
+        <span>Bill Each:</span>
+        <span id="billEach"></span>
+      </div>
+      <div class="space-between">
+        <span>Tip Each:</span>
+        <span id="tipEach"></span>
+      </div>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+
+</html>
